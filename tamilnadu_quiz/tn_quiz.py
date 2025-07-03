@@ -241,13 +241,13 @@ with col1:
 if not st.session_state.completed:
     q = st.session_state.questions[st.session_state.current]
     st.progress((st.session_state.current + 1) / num_questions)
-    if "image" in q and q["image"]:
-        image_path = os.path.join("images", q["image"])
-        if os.path.exists(image_path):
-            st.image(image_path, use_column_width=True, caption="Question Image")
-        else:
-            # If image doesn't exist locally, display a placeholder
-            st.info(f"Image for {q['answer']} will be displayed here.")
+    # if "image" in q and q["image"]:
+    #     image_path = os.path.join("images", q["image"])
+    #     if os.path.exists(image_path):
+    #         st.image(image_path, use_column_width=True, caption="Question Image")
+    #     else:
+    #         # If image doesn't exist locally, display a placeholder
+    #         st.info(f"Image for {q['answer']} will be displayed here.")
     st.markdown(f"### Q{st.session_state.current + 1}: {q['question']}")
     
     # Initialize the answer as None if not already in session_state
