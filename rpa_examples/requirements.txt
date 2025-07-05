@@ -2,3 +2,4 @@ pyautogui
 keyboard
 PySimpleGUI
 streamlit
+playwright
